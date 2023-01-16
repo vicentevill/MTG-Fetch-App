@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTG Fetcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Checkboxes -->
+    <div id="input">
+      <input type="checkbox" name="White" id="checkbox" />
+      <input type="checkbox" name="Blue" id="checkbox" />
+      <input type="checkbox" name="Black" id="checkbox" />
+      <input type="checkbox" name="Red" id="checkbox" />
+      <input type="checkbox" name="Green" id="checkbox" />
+    </div>
+    <main>
+      <div id="toolTip">
+        Color identity is the combination of all colors in a card's mana cost,
+        indicators, and abilities.
+      </div>
+      <!-- Promps -->
+      <div id="prompts">
+        <h1>Choose your commander's color identity</h1>
+        <p id="info">i</p>
+      </div>
+      <!-- Colors -->
+      <div id="colorSelections">
+        <div id="white" class="colorSelection"></div>
+        <div id="blue" class="colorSelection"></div>
+        <div id="black" class="colorSelection"></div>
+        <div id="red" class="colorSelection"></div>
+        <div id="green" class="colorSelection"></div>
+      </div>
+      <div id="colors">
+        <img class="color" src="whiteMana.svg" alt="whiteMana" />
+        <img class="color" src="blueMana.svg" alt="blueMana" />
+        <img class="color" src="blackMana.svg" alt="blackMana" />
+        <img class="color" src="redMana.svg" alt="redMana" />
+        <img class="color" src="greenMana.svg" alt="greenMana" />
+      </div>
+      <!-- Cycles -->
+      <div id="cycles">
+        <div id="fetch" class="fetchable">Fetch</div>
+        <div id="andOr">and/or</div>
+        <div id="dual" class="dual">Shock</div>
+      </div>
+      <!-- Loading -->
+      <div class="lds-dual-ring"></div>
+      <!-- List -->
+      <div id="listArea">
+        <div id="copyButton">
+          <img src="copy.svg" alt="copy to clipboard" />
+        </div>
+        <ul id="landList"></ul>
+      </div>
+      <!-- Copy -->
+      <div id="copied">
+        Copied <img id="check" src="check.svg" alt="check" />
+      </div>
+      <!-- Next -->
+      <div id="back">
+        <img id="arrowsBack" src="arrows.svg" alt="arrows" />
+        <h2>Back</h2>
+      </div>
+      <div id="next">
+        <h2>Next</h2>
+        <img id="arrows" src="arrows.svg" alt="arrows" />
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
